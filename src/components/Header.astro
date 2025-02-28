@@ -1,0 +1,14 @@
+---
+import CSS from "../styles/modules/header.module.css";
+import MenuButton from './MenuButton.jsx';
+---
+
+<header>
+  <header class={CSS.header}>
+    <div class={CSS.containerBtn}>
+      <label for="toggle-btn">MENÚ</label>
+      <MenuButton client:load />
+    </div>
+    <div class={CSS.overlay}></div>
+  </header>
+</header>

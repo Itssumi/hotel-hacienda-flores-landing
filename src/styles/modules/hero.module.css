@@ -1,0 +1,72 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: zoom 20s ease-in-out infinite;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.heroContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.logoHotelHacienda {
+    height: 320px;
+    width: 320px;
+    fill: #fff;
+    filter: drop-shadow(1px 1px 2px rgba(255, 255, 255, .2));
+}
+
+.heroLogoTitle {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.heroContainerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        /* Ajusta el nivel de zoom */
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
