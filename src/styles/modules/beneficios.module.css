@@ -1,5 +1,64 @@
 .sectionBenificios {
     width: 100%;
     height: auto;
-    border: 1px solid red;
+}
+
+
+.wrapBenificios {
+    padding: 32px;
+}
+
+.containerBeneficios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.itemBeneficio {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-left: 16px;
+    padding: 8px;
+}
+
+.titleBeneficio {
+    font-size: 20px;
+    display: flex;
+    color: #4A4A4A;
+    gap: 8px;
+}
+
+.titleBeneficio .titleBeneficioIcon {
+    color: #B08D57;
+    width: 32px;
+    height: 32px;
+}
+
+.descriptionBeneficio {
+    font-size: 16px;
+    line-height: 1.2;
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    .containerBeneficios {
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .wrapBenificios {
+        padding: 120px 64px;
+    }
+
+    .descriptionBeneficio {
+        font-size: 18px;
+        margin-right: 12px;
+    }
 }

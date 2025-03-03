@@ -1,6 +1,50 @@
 /* Importa las variables CSS */
 @import './variables.css';
 
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('/fonts/Mulish-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('/fonts/Mulish-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('/fonts/Mulish-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('/fonts/Mulish-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* Reset básico */
 * {
     margin: 0;
@@ -14,7 +58,59 @@ body {
     color: var(--color-text);
     background-color: var(--color-background);
     line-height: 1.6;
+    margin: 0;
+    /* Asegúrate de que no haya márgenes por defecto */
+    padding: 0;
+    /* Asegúrate de que no haya relleno por defecto */
+    overflow: hidden;
 }
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+
+/* Estilo para la barra de desplazamiento en Webkit */
+main::-webkit-scrollbar {
+    background-color: #555;
+    width: 4px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+main::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Color de fondo de la pista del scroll */
+    border-radius: 5px;
+    /* Bordes redondeados para la pista */
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color de la parte que se desplaza */
+    border-radius: 5px;
+    /* Bordes redondeados para la parte que se desplaza */
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Color cuando el usuario pasa el mouse sobre la parte del scroll */
+}
+
+.content {
+    padding-top: 20px;
+    height: auto;
+    margin-top: 100vh;
+}
+
 
 /* Estilos para encabezados */
 h1,
@@ -35,4 +131,27 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
 }

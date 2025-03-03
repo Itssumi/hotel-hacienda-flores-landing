@@ -1,0 +1,50 @@
+---
+import CSS from "../../styles/modules/habitacion.module.css";
+const { clasName, id, tipo, nombre, detalles, imagen } = Astro.props;
+---
+
+<div class={clasName} id={id}>
+  <div>
+    <header class={CSS.headerHabitacion}>
+      <h3>
+        <span>{tipo}</span>
+        <span>{nombre}</span>
+      </h3>
+    </header>
+
+    <div class={CSS.habitacionDetails}>
+      <div class={CSS.habitacionDetailsWrap}>
+        <ul class={CSS.habitacionDetailsContent}>
+          {
+            detalles.map((detalle, index) => (
+              <li key={index}>
+                <div class={CSS.habitacionDetail}>
+                  <img src={detalle.icono} alt={detalle.descripcion} />
+                  <span>{detalle.descripcion}</span>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+
+        <div class={CSS.containerButton}>
+          <button class={CSS.buttonReservar}>
+            Reserva esta habitación
+            <svg
+              class={CSS.buttonReservarIcon}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              ><path
+                fill="currentColor"
+                d="M16 176a8 8 0 0 1 8-8h8v-16a96.12 96.12 0 0 1 88-95.66V40h-16a8 8 0 0 1 0-16h48a8 8 0 0 1 0 16h-16v16.34A96.12 96.12 0 0 1 224 152v16h8a8 8 0 0 1 0 16H24a8 8 0 0 1-8-8m216 24H24a8 8 0 0 0 0 16h208a8 8 0 0 0 0-16"
+              ></path></svg
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class={CSS.habitacionContainerImg}>
+    <img src={imagen} alt=`${tipo} ${nombre}` />
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.sectionIntroduccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 54px;
+    margin-bottom: 64px;
+    margin-inline: auto;
+    width: calc(100% - 32px);
+    max-width: 720px;
+}
+
+.wrapIntroduccion {
+    padding: 32px;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.introduccionText {
+    color: #4A4A4A;
+    font-size: clamp(18px, 2vw, 24px);
+    font-family: var(--font-secondary);
+}

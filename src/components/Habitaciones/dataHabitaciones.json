@@ -1,0 +1,155 @@
+[
+    {
+        "id": "departamentoKing",
+        "tipo": "Departamento",
+        "nombre": "King",
+        "detalles": [
+            {
+                "descripcion": "Capacidad 2 personas",
+                "icono": "/icons/habitaciones/group.svg"
+            },
+            {
+                "descripcion": "Cama King Size",
+                "icono": "/icons/habitaciones/bed.svg"
+            },
+            {
+                "descripcion": "Vista a la Parroquia San Miguel Arcangel",
+                "icono": "/icons/habitaciones/overview.svg"
+            },
+            {
+                "descripcion": "2 baños privados",
+                "icono": "/icons/habitaciones/shower.svg"
+            },
+            {
+                "descripcion": "Sala de estar",
+                "icono": "/icons/habitaciones/couch.svg"
+            },
+            {
+                "descripcion": "Cocineta",
+                "icono": "/icons/habitaciones/kitchen.svg"
+            },
+            {
+                "descripcion": "Terraza",
+                "icono": "/icons/habitaciones/terrace.svg"
+            }
+        ],
+        "imagen": "/assets/desktop/departamento-king.avif",
+        "whatsapp": "https://wa.me/5211234567890?text=Hola,%20quiero%20reservar%20la%20habitación%20Departamento%20King."
+    },
+    {
+        "id": "suiteKing",
+        "tipo": "Suite",
+        "nombre": "King",
+        "detalles": [
+            {
+                "descripcion": "Ideal para 2 personas",
+                "icono": "/icons/habitaciones/group.svg"
+            },
+            {
+                "descripcion": "Cama King Size",
+                "icono": "/icons/habitaciones/bed.svg"
+            },
+            {
+                "descripcion": "1 Baño privado",
+                "icono": "/icons/habitaciones/shower.svg"
+            },
+            {
+                "descripcion": "Área de estar",
+                "icono": "/icons/habitaciones/couch.svg"
+            },
+            {
+                "descripcion": "Cocineta",
+                "icono": "/icons/habitaciones/kitchen.svg"
+            },
+            {
+                "descripcion": "Puede no ser adecuado para personas con movilidad reducida",
+                "icono": "/icons/habitaciones/info.svg"
+            }
+        ],
+        "imagen": "/assets/desktop/suite-king.avif",
+        "whatsapp": "https://wa.me/5211234567890?text=Hola,%20quiero%20reservar%20la%20habitación%20Departamento%20King."
+    },
+    {
+        "id": "suiteDoble",
+        "tipo": "Suite",
+        "nombre": "Doble",
+        "detalles": [
+            {
+                "descripcion": "Ideal para 4 personas",
+                "icono": "/icons/habitaciones/group.svg"
+            },
+            {
+                "descripcion": "2 camas queen size o matrimonial",
+                "icono": "/icons/habitaciones/bed.svg"
+            },
+            {
+                "descripcion": "1 Baño privado",
+                "icono": "/icons/habitaciones/shower.svg"
+            },
+            {
+                "descripcion": "Área de estar",
+                "icono": "/icons/habitaciones/couch.svg"
+            },
+            {
+                "descripcion": "Cocineta",
+                "icono": "/icons/habitaciones/kitchen.svg"
+            },
+            {
+                "descripcion": "Vista hacía el jardín",
+                "icono": "/icons/habitaciones/overview.svg"
+            }
+        ],
+        "imagen": "/assets/desktop/suite-doble.avif",
+        "whatsapp": "https://wa.me/5211234567890?text=Hola,%20quiero%20reservar%20la%20habitación%20Departamento%20King."
+    },
+    {
+        "id": "habitacionDeluxeKing",
+        "tipo": "Habitación",
+        "nombre": "Deluxe King",
+        "detalles": [
+            {
+                "descripcion": "Amplia, ideal para 2 personas",
+                "icono": "/icons/habitaciones/group.svg"
+            },
+            {
+                "descripcion": "1 cama king size",
+                "icono": "/icons/habitaciones/bed.svg"
+            },
+            {
+                "descripcion": "1 Baño privado",
+                "icono": "/icons/habitaciones/shower.svg"
+            },
+            {
+                "descripcion": "Armario",
+                "icono": "/icons/habitaciones/closet.svg"
+            }
+        ],
+        "imagen": "/assets/desktop/deluxe-king.avif",
+        "whatsapp": "https://wa.me/5211234567890?text=Hola,%20quiero%20reservar%20la%20habitación%20Departamento%20King."
+    },
+    {
+        "id": "habitacionEstandar",
+        "tipo": "Habitación",
+        "nombre": "Estándar",
+        "detalles": [
+            {
+                "descripcion": "Ideal para 2 personas",
+                "icono": "/icons/habitaciones/group.svg"
+            },
+            {
+                "descripcion": "1 cama king size",
+                "icono": "/icons/habitaciones/bed.svg"
+            },
+            {
+                "descripcion": "1 Baño privado",
+                "icono": "/icons/habitaciones/shower.svg"
+            },
+            {
+                "descripcion": "Vista hacía el jardín",
+                "icono": "/icons/habitaciones/overview.svg"
+            }
+        ],
+        "imagen": "/assets/desktop/habitacion-estandar.avif",
+        "whatsapp": "https://wa.me/5211234567890?text=Hola,%20quiero%20reservar%20la%20habitación%20Departamento%20King."
+    }
+]

@@ -1,51 +1,87 @@
 ---
-import CSS from '../styles/modules/beneficios.module.css';
+import CSS from "../styles/modules/beneficios.module.css";
 
 const beneficios = [
-    {
-        title: 'Ubicación',
-        icono: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 1v2H9v2h2v.98l-5 3.5V12H2v10h20V12h-4V9.48l-5-3.5V5h2V3h-2V1zm1 6.72l4 2.8V20h-1v-4a3 3 0 1 0-6 0v4H8v-9.48zM6 20H4v-6h2zm5 0v-4a1 1 0 1 1 2 0v4zm7 0v-6h2v6z"/></svg>',
-        descripcion: 'Contamos con una privilegiada ubicación cerca de la parroquia de San Miguel Arcangel',
-    },
-    {
-        title: 'Atracciones',
-        icono: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><path fill-rule="evenodd" d="M10.915 2.345a2 2 0 0 1 2.17 0l7 4.52A2 2 0 0 1 21 8.544V9.5a1.5 1.5 0 0 1-1.5 1.5H19v6h1a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h1v-6h-.5A1.5 1.5 0 0 1 3 9.5v-.955a2 2 0 0 1 .915-1.68zM17 17v-6h-2v6zm-6-6h2v6h-2zm-2 6v-6H7v6z" clip-rule="evenodd"/><path d="M2 21a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1"/></g></svg>',
-        descripcion: 'Descubre atracciones turísticas, culturales y comerciales que te ofrece el centro histórico.',
-    },
-    {
-        title: 'Explora',
-        icono: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m10.9 15l-1.625 7.2q-.075.35-.363.575T8.25 23q-.5 0-.8-.375t-.2-.85L10.075 7.45q.15-.725.675-1.088T11.85 6t1.063.25t.787.75l1 1.6q.45.725 1.163 1.312t1.637.863V9.75q0-.325.213-.537T18.25 9t.538.213t.212.537v12.5q0 .325-.213.538T18.25 23t-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3l1.8 1.7q.15.15.225.338t.075.387V22q0 .425-.288.713T14 23t-.712-.288T13 22v-5zm-4.45-2.05l-1.15-.225q-.4-.075-.625-.413t-.15-.762l.75-3.925q.15-.85.9-1.287T7.8 6.075q.425.075.638.413t.137.762l-.95 4.9q-.075.425-.412.65t-.763.15M13.5 5.5q-.825 0-1.412-.587T11.5 3.5t.588-1.412T13.5 1.5t1.413.588T15.5 3.5t-.587 1.413T13.5 5.5"/></svg>',
-        descripcion: 'Explora las diferentes experiencias locales y vive la aventura.',
-    },
-    {
-        title: 'Jardín y alberca',
-        icono: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 13.5H13a2 2 0 0 1-2-2a2 2 0 0 1-4 0a2 2 0 0 1-4 0a2 2 0 0 1-2 2H.5m2-11a2 2 0 1 1 4 0v7m3-9a2 2 0 0 1 2 2v7m-5-5h5m-5 3h5" stroke-width="1"/></svg>',
-        descripcion: 'Relájate con las vistas interiores hacia nuestro jardín y alberca',
-    }
-]
+  {
+    title: "Ubicación",
+    icono:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 1v2H9v2h2v.98l-5 3.5V12H2v10h20V12h-4V9.48l-5-3.5V5h2V3h-2V1zm1 6.72l4 2.8V20h-1v-4a3 3 0 1 0-6 0v4H8v-9.48zM6 20H4v-6h2zm5 0v-4a1 1 0 1 1 2 0v4zm7 0v-6h2v6z"/></svg>',
+    descripcion:
+      "Contamos con una privilegiada ubicación cerca de la parroquia de San Miguel Arcangel.",
+  },
+  {
+    title: "Atracciones",
+    icono:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><path fill-rule="evenodd" d="M10.915 2.345a2 2 0 0 1 2.17 0l7 4.52A2 2 0 0 1 21 8.544V9.5a1.5 1.5 0 0 1-1.5 1.5H19v6h1a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h1v-6h-.5A1.5 1.5 0 0 1 3 9.5v-.955a2 2 0 0 1 .915-1.68zM17 17v-6h-2v6zm-6-6h2v6h-2zm-2 6v-6H7v6z" clip-rule="evenodd"/><path d="M2 21a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1"/></g></svg>',
+    descripcion:
+      "Descubre atracciones turísticas, culturales y comerciales que te ofrece el centro histórico.",
+  },
+  {
+    title: "Explora",
+    icono:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m10.9 15l-1.625 7.2q-.075.35-.363.575T8.25 23q-.5 0-.8-.375t-.2-.85L10.075 7.45q.15-.725.675-1.088T11.85 6t1.063.25t.787.75l1 1.6q.45.725 1.163 1.312t1.637.863V9.75q0-.325.213-.537T18.25 9t.538.213t.212.537v12.5q0 .325-.213.538T18.25 23t-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3l1.8 1.7q.15.15.225.338t.075.387V22q0 .425-.288.713T14 23t-.712-.288T13 22v-5zm-4.45-2.05l-1.15-.225q-.4-.075-.625-.413t-.15-.762l.75-3.925q.15-.85.9-1.287T7.8 6.075q.425.075.638.413t.137.762l-.95 4.9q-.075.425-.412.65t-.763.15M13.5 5.5q-.825 0-1.412-.587T11.5 3.5t.588-1.412T13.5 1.5t1.413.588T15.5 3.5t-.587 1.413T13.5 5.5"/></svg>',
+    descripcion: "Explora las diferentes experiencias locales y vive la aventura.",
+  },
+  {
+    title: "Jardín y alberca",
+    icono:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 13.5H13a2 2 0 0 1-2-2a2 2 0 0 1-4 0a2 2 0 0 1-4 0a2 2 0 0 1-2 2H.5m2-11a2 2 0 1 1 4 0v7m3-9a2 2 0 0 1 2 2v7m-5-5h5m-5 3h5" stroke-width="1"/></svg>',
+    descripcion: "Relájate con las vistas interiores hacia nuestro jardín y alberca.",
+  },
+];
 ---
 
-<section class={CSS.sectionBenificios} >
-    <header>
-        <h2>Beneficios</h2>
-    </header>
+<section class={CSS.sectionBenificios}>
+  <div class={CSS.wrapBenificios}>
     <div>
-        <div>
-           <ul>
-                {beneficios.map((beneficio, index)=>
-                    <li key={`beneficio-${index}`}>
-                        <div>
-                            <h3>{beneficio.title}</h3>
-                            <div>
-                                <div set:html={beneficio.icono}></div>
-                            </div>
-                            <div>
-                                {beneficio.descripcion}
-                            </div>
-                        </div>
-                    </li>
-                )}
-           </ul>
-        </div>
+      <ul class={CSS.containerBeneficios}>
+        {
+          beneficios.map((beneficio, index) => (
+            <li key={`beneficio-${index}`} class={`itemBeneficio ${CSS.itemBeneficio}`}>
+              <div>
+                <h2 class={CSS.titleBeneficio}>
+                  <span>{beneficio.title}</span>
+                  <div set:html={beneficio.icono} class={CSS.titleBeneficioIcon} />
+                </h2>
+
+                <div class={CSS.descriptionBeneficio}>{beneficio.descripcion}</div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
     </div>
+  </div>
 </section>
+
+<script>
+  if (typeof window !== "undefined") {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 } // Se activa cuando el 20% del elemento es visible
+    );
+
+    document.querySelectorAll(".itemBeneficio").forEach((el) => observer.observe(el));
+  }
+</script>
+
+<style>
+  .itemBeneficio {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 1.6s ease-out,
+      transform 0.8s ease-out;
+  }
+
+  .itemBeneficio.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

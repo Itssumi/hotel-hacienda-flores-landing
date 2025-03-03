@@ -1,5 +1,17 @@
-<section class="">
-    <p>
-        Situado en el centro histórico de San Miguel de Allende Guanajuato en una acogedora casa estilo colonial con magia y encanto.
-    </p>
+---
+import CSS from "../styles/modules/introduccion.module.css";
+
+
+---
+
+<section class={CSS.sectionIntroduccion}>
+
+    <div class={CSS.wrapIntroduccion}>
+        <p class={`${CSS.introduccionText} fade-in`}> 
+            Situado en el centro histórico de San Miguel de Allende Guanajuato en una acogedora casa estilo colonial con magia y encanto.
+        </p>
+    </div>
+    
 </section>
+
+<script src="/src/utils/scrollFade.js"></script>

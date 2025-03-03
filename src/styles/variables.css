@@ -8,10 +8,11 @@
             190, .5);
     --color-text: #333;
     --color-text-light: #2C2C2C;
+    --color-icons: #b08d57;
 
     /* Fuentes */
-    --font-primary: 'Arial', sans-serif;
-    --font-secondary: 'Georgia', serif;
+    --font-primary: 'Mulish', serif;
+    --font-secondary: 'Libre Baskerville', serif;
 
     /* Espaciados */
     --spacing-small: 8px;

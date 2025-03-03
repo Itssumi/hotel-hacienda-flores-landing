@@ -3,6 +3,8 @@
     height: 100vh;
     overflow: hidden;
     position: absolute;
+    color: #fff;
+    padding-inline: 16px;
 }
 
 .heroImage {
@@ -15,6 +17,57 @@
     left: 0;
     animation: zoom 20s ease-in-out infinite;
 }
+
+
+.heroTitle h1 {
+    color: #fff;
+    text-transform: capitalize;
+    text-wrap: pretty;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.heroButton {
+    display: flex;
+    justify-content: center;
+    padding: 4px 16px;
+    gap: 8px;
+    width: calc(100% - 32px);
+    max-width: 320px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 32px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+
+.heroButton:hover {
+    background-color: #fff;
+    color: #222;
+    transform: translateY(-2px);
+    transition: all .2s ease-in;
+}
+
+.heroContainerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.heroButtonIcon svg {
+    width: 22px;
+    height: 22px;
+}
+
 
 .overlay {
     width: 100%;
@@ -31,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 32px);
     height: 100%;
     position: absolute;
     z-index: 2;
@@ -56,6 +109,38 @@
     align-items: center;
 }
 
+.scrollDown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #555;
+}
+
+.scrollDownIcon {
+    width: 24px;
+    height: 24px;
+    animation: bounce 1.5s infinite;
+
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
 @keyframes zoom {
     0% {
         transform: scale(1);
@@ -69,4 +154,44 @@
     100% {
         transform: scale(1);
     }
+}
+
+@media screen and (max-width: 520px) {
+    .logoHotelHacienda {
+        height: 200px;
+        width: 200px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    .scrollDown {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+
+}
+
+@media screen and (min-width: 520px) {
+
+    .heroTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 720px;
+    }
+
+
+    .heroTitle h1 {
+        font-size: 43.44px;
+        text-align: center;
+
+    }
+
+    .heroTitle p {
+
+        font-size: 27px;
+        text-align: center;
+    }
+
 }

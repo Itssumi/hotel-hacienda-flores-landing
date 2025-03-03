@@ -1,0 +1,115 @@
+---
+import data from "../components/Habitaciones/dataHabitaciones.json";
+import CSS from "../styles/modules/habitaciones.module.css";
+import Habitacion from "./Habitaciones/Habitacion.astro";
+---
+
+<section class={CSS.sectionHabitaciones}>
+  <header class={CSS.titleHabitaciones}>
+    <h2>Habitaciones</h2>
+    <p>
+      Queremos que tu estancia sea placentera y disfrutes del encanto de nuestras cómodas
+      habitaciones. ¡Conócelas!
+    </p>
+  </header>
+  <div class={CSS.containerHabitaciones}>
+    <div class={CSS.containerButtonCarousel}>
+      <button id="buttonPrevCarousel">
+        <div class={CSS.containerIconButtonCarousel}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10m-2 0a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8a8 8 0 0 0 8-8m-4.6 4.6L10.8 12l4.6-4.6L14 6l-6 6l6 6z"
+            ></path></svg
+          >
+        </div>
+      </button>
+    </div>
+
+    <div class={CSS.habitacionesView} id="habitacionesView">
+      {
+        data.map((habitacion) => (
+          <Habitacion
+            clasName={CSS.habitacionItem}
+            id={habitacion.id}
+            tipo={habitacion.tipo}
+            nombre={habitacion.nombre}
+            imagen={habitacion.imagen}
+            detalles={habitacion.detalles}
+          />
+        ))
+      }
+    </div>
+
+    <div class={CSS.containerButtonCarousel}>
+      <button id="buttonNextCarousel" aria-label="Siguiente">
+        <div class={CSS.containerIconButtonCarousel}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+            ><path
+              fill="currentColor"
+              d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13s13-5.832 13-13S23.168 3 16 3m0 2c6.087 0 11 4.913 11 11s-4.913 11-11 11S5 22.087 5 16S9.913 5 16 5m-1.78 4.28l-1.44 1.44L18.064 16l-5.282 5.28l1.44 1.44l6-6l.686-.72l-.687-.72z"
+            ></path></svg
+          >
+        </div>
+      </button>
+    </div>
+
+    <div class={CSS.containerSwipe}>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          ><path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="m12.112 8.685l.853-4.924c.141-.816-.394-1.594-1.195-1.738a1.476 1.476 0 0 0-1.707 1.217l-1.706 9.848l-.141.763l-1.91-2.014a1.613 1.613 0 0 0-2.446.14a1.73 1.73 0 0 0-.031 2.072l2.927 4.018c.664.912.997 1.367 1.396 1.722c.61.54 1.341.917 2.127 1.094c.515.117 1.069.117 2.176.117h2.334c2.31 0 4.301-1.676 4.76-4.007l.843-4.284l.085-.492a1.497 1.497 0 0 0-1.195-1.738a1.476 1.476 0 0 0-1.707 1.217l-.085.492m-5.378-3.503l-.256 1.477m.256-1.477a1.476 1.476 0 0 1 1.707-1.217a1.5 1.5 0 0 1 1.195 1.738l-.17.984m0 0l-.086.493m.086-.493a1.476 1.476 0 0 1 1.707-1.216c.801.144 1.336.921 1.195 1.737l-.085.493"
+            color="currentColor"></path></svg
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          ><path
+            fill="currentColor"
+            d="M19.235 13.234H4.765v3.494L0 11.964l4.765-4.765v3.494h14.47V7.199L24 11.964l-4.765 4.765z"
+          ></path></svg
+        >
+      </div>
+
+      <div>Desliza para ver otras habitaciones</div>
+    </div>
+  </div>
+  <!-- <div>
+      <h3>Todas las habitaciones incluyen</h3>
+      <div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-1.05 0-1.775-.725T9.5 18.5t.725-1.775T12 16t1.775.725t.725 1.775t-.725 1.775T12 21m0-11q1.875 0 3.563.6t3.062 1.65q.5.375.513.988T18.7 14.3q-.425.425-1.05.438t-1.125-.338q-.95-.65-2.1-1.025T12 13t-2.425.375t-2.1 1.025q-.5.35-1.125.325t-1.05-.45q-.425-.45-.425-1.062t.5-.988q1.375-1.05 3.063-1.638T12 10m0-6q3.125 0 5.888 1.025t4.962 2.9q.5.425.525 1.05t-.425 1.075q-.425.425-1.05.438t-1.125-.388q-1.8-1.475-4.037-2.287T12 7t-4.737.813T3.225 10.1q-.5.4-1.125.388t-1.05-.438Q.6 9.6.625 8.975t.525-1.05q2.2-1.875 4.963-2.9T12 4"/></svg>
+            <span>Wifi</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 18q-2.925 0-4.962-2.037T4 11V5q0-.825.588-1.412T6 3h12.5q1.45 0 2.475 1.025T22 6.5t-1.025 2.475T18.5 10H18v1q0 2.925-2.037 4.963T11 18M6 8h10V5H6zm12 0h.5q.625 0 1.063-.437T20 6.5t-.437-1.062T18.5 5H18zM4 21v-2h16v2z"/></svg>
+            <span>Menaje para preparar café</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M2 18v-3q0-1.65 1.175-2.825T6 11h9v-1q0-.425-.288-.712T14 9h-4q-.425 0-.712.288T9 10H7q0-1.25.875-2.125T10 7h4q1.25 0 2.125.875T17 10v4q.425 0 .713-.288T18 13V9q0-1.25.875-2.125T21 6h1v2h-1q-.425 0-.712.288T20 9v4q0 1.25-.875 2.125T17 16v2z"/></svg>
+            <span>Plancha</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path d="M42 12H6a2 2 0 0 0-2 2v26a2 2 0 0 0 2 2h36a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2Z"/><path d="M31 19H11v16h20z"/><path stroke-linecap="round" d="m14 4.5l9.09 7.5L34 2m4 16v1m0 6v1"/></g></svg>
+            <span>TV satélite</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="m4.74 14.369l1.954-1.387a5.3 5.3 0 0 1 1.746-.823c.732-.195 1.06-.595 1.06-1.448c0-2.165 5-2.395 5 0c0 .853.328 1.253 1.06 1.447c.642.172 1.2.435 1.746.824l1.954 1.386c.883.628 1.295.931 1.524 1.414c.216.454.216.986.216 2.05c0 1.914 0 2.871-.536 3.484c-.649.743-2.336.68-3.372.68H6.908c-1.036 0-2.689.103-3.372-.68C3 20.703 3 19.746 3 17.832c0-1.064 0-1.596.216-2.05c.23-.482.64-.786 1.524-1.414"/><path d="M14 17a2 2 0 1 1-4 0a2 2 0 0 1 4 0M6.96 3.698c-1.318.376-2.266.843-3.134 1.407c-1.373.892-1.962 2.499-1.8 4.05c.068.656.595.97 1.205.8c.464-.13.928-.255 1.389-.391c1.347-.4 1.664-.886 1.851-2.265zm0 0c3.259-.93 6.821-.93 10.08 0m0 0c1.318.376 2.266.843 3.134 1.407c1.373.892 1.962 2.499 1.8 4.05c-.068.656-.595.97-1.205.8c-.463-.13-.928-.255-1.389-.391c-1.347-.4-1.664-.886-1.851-2.265z"/></g></svg>
+            <span>Teléfono</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path fill="currentColor" d="M13 .188C7.582.188 3.187 4.58 3.187 10c0 5.417 4.396 9.811 9.813 9.813c5.416-.002 9.813-4.396 9.813-9.813c0-5.421-4.399-9.813-9.813-9.813zm0 1.125c4.794 0 8.688 3.89 8.688 8.687S17.796 18.686 13 18.688a8.687 8.687 0 1 1 0-17.375m-2.469 1.656c-1.176.115-2.349 1.63-1.625 3c.68 1.284 2.096 1.16 2.531 2.625c.405-.556 1.206-1.184 2.563-.531c.878-3.252-.975-5.332-3.469-5.094m8.031 5.5c-1.45-.055-2.077 1.229-3.562.875c.277.627.432 1.65-.813 2.5c2.377 2.385 5.085 1.81 6.126-.469c.489-1.075-.201-2.85-1.75-2.906zm-5.812.25c-.59.12-1.031.655-1.031 1.281c0 .716.565 1.281 1.281 1.281s1.281-.565 1.281-1.281S13.716 8.719 13 8.719c-.09 0-.166-.018-.25 0m-1.938 1.375c-3.254.865-4.11 3.521-2.656 5.562c.686.961 2.582 1.22 3.406-.094c.773-1.228-.05-2.39 1-3.5c-.681-.073-1.637-.466-1.75-1.968M11 21c0 2.001-4 2.344-4 4v1h12v-1c0-1.656-4-1.999-4-4c0 0-.379.313-2 .313S11 21 11 21"/></svg>
+            <span>Ventiladores</span>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m2 6l6.99 7H2v3h9.99l7 7l1.26-1.25l-17-17zm18.5 7H22v3h-1.5zM18 13h1.5v3H18zm.85-8.12c.62-.61 1-1.45 1-2.38h-1.5c0 1.02-.83 1.85-1.85 1.85v1.5c2.24 0 4 1.83 4 4.07V12H22V9.92c0-2.23-1.28-4.15-3.15-5.04M14.5 8.7h1.53c1.05 0 1.97.74 1.97 2.05V12h1.5v-1.59c0-1.8-1.6-3.16-3.47-3.16H14.5c-1.02 0-1.85-.98-1.85-2s.83-1.75 1.85-1.75V2a3.35 3.35 0 0 0 0 6.7m2.5 7.23V13h-2.93z"/></svg>
+            <span>Libres de fumadores</span>
+        </div>
+      </div>
+    </div> -->
+</section>
+
+<script src="/src/utils/carouselHabitaciones.js"></script>
